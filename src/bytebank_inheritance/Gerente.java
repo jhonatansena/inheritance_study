@@ -8,13 +8,18 @@ public class Gerente extends Funcionario {
 		return this.senha == senha ? true : false;
 	}
 	
-	public double salarioSomadoComBonificacao() {
-		System.out.println("A bonificação do Gerente é: " + super.bonificacaoIndividual());
-		return super.getBonificacao() + super.getSalario();
-	}
+
 	
 	public boolean autentica(int senha, String login) {
 		return this.senha == senha ? true : false;
+	}
+
+
+
+	@Override
+	public double getBonificacao() {
+		// TODO Auto-generated method stub
+		return super.getSalario();
 	}
 	
 	

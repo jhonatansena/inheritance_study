@@ -5,10 +5,10 @@ public class ControleBonificacao {
 	private double somaBonificao = 0.0;
 	
 	public void registra(Funcionario f) {
-		this.somaBonificao += f.salarioSomadoComBonificacao();
+		this.somaBonificao += f.getBonificacao() ;
 	}
 	
-	public double getSomaBonificacaoTotal() {
+	public double getSomaBonificacao() {
 		return this.somaBonificao;
 	}
 }

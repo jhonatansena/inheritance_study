@@ -1,23 +1,15 @@
 package bytebank_inheritance;
 
-public class Funcionario {
+public abstract class Funcionario {
 	private String nome;
 	private String cpf;
 	private double salario;
 	private double bonificao = 0.05;
 	
-	public double getBonificacao() {
-		return this.salario * this.bonificao;
-	}
+	public abstract double getBonificacao();
 	
 	public double bonificacaoIndividual() {
 		return this.bonificao * this.salario;
-	}
-	public void setBonificao(double bonificao) {
-		this.bonificao = bonificao;
-	}
-	public double salarioSomadoComBonificacao() {
-		return this.salario * this.bonificao;
 	}
 	
 	public String getNome() {

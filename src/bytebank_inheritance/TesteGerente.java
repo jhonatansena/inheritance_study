@@ -10,21 +10,22 @@ public class TesteGerente {
 		g1.setNome("Jhondsfsd");
 		g1.setCpf("343432432");
 		
-		Funcionario f1 = new Funcionario();
-		f1.setSalario(2000);
-		f1.setNome("Jhondsfsd");
-		f1.setCpf("343432432");	
-
 		EditorVideo vd = new EditorVideo();
-		vd.setSalario(3000);
+		vd.setSalario(2500);
 		vd.setNome("Jhondsfsd");
 		vd.setCpf("343432432");
+		
+		Designer d = new Designer();
+		d.setSalario(2000);
+		d.setNome("Jhondsfsd");
+		d.setCpf("343432432");
+		
 		ControleBonificacao cb = new ControleBonificacao();
 		cb.registra(g1);
-		cb.registra(f1);
 		cb.registra(vd);
+		cb.registra(d);
 		
-		System.out.println(cb.getSomaBonificacaoTotal());
+		System.out.println(cb.getSomaBonificacao());
 	
 	
 	}
