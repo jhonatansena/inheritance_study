@@ -1,20 +1,21 @@
 package bytebank_inheritance;
 
 public class Cliente implements Autenticavel{
-	private int senha;
-	@Override
-	public void setSenha(int senha) {
-		// TODO Auto-generated method stub
-		this.senha = senha;
+	private AutenticacaoUtil autenticador;
+
+	Cliente(){
+		this.autenticador = new AutenticacaoUtil();
 	}
 
 	@Override
+	public void setSenha(int senha) {
+		autenticador.setSenha(senha);
+	}
+	
+	@Override
 	public boolean autentica(int senha) {
-		if(this.senha == senha) {
-			return true;
-		} else {
-			return false;			
-		}
+		boolean result = autenticador.autentica(senha);
+		return result;
 	}
 
 }
