@@ -16,12 +16,15 @@ public class TesteGerente {
 		ad.setSalario(2000);
 		ad.setNome("Jhondsfsd");
 		ad.setCpf("343432432");
-		ad.setSenha(333);
+		ad.setSenha(222);
+		
+		Cliente cl = new Cliente();
+		cl.setSenha(222);
 		
 		SistemInterno si = new SistemInterno();
 		si.autentica(ad);
 		si.autentica(g1);
-	
+		si.autentica(cl);
 	}
 
 }

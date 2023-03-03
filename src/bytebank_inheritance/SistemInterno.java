@@ -3,7 +3,7 @@ package bytebank_inheritance;
 public class SistemInterno {
 	private int senha = 222;
 	
-	public void autentica(FuncionarioAutenticavel fa) {
+	public void autentica(Autenticavel fa) {
 		boolean autentica = fa.autentica(this.senha);
 		
 		if(autentica) {

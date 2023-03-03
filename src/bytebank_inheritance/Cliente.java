@@ -1,19 +1,11 @@
 package bytebank_inheritance;
 
-public class Administrador extends Funcionario implements Autenticavel{
+public class Cliente implements Autenticavel{
 	private int senha;
-	
-	@Override
-	public double getBonificacao() {
-		// TODO Auto-generated method stub
-		return super.getSalario();
-	}
-
 	@Override
 	public void setSenha(int senha) {
+		// TODO Auto-generated method stub
 		this.senha = senha;
-
-		
 	}
 
 	@Override
@@ -24,6 +16,5 @@ public class Administrador extends Funcionario implements Autenticavel{
 			return false;			
 		}
 	}
-	
 
 }
