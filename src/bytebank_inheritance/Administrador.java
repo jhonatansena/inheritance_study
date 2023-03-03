@@ -1,10 +1,10 @@
 package bytebank_inheritance;
 
 public class Administrador extends Funcionario implements Autenticavel{
-	private AutenticacaoUtil autenticador;
+	private AutenticacaoUtil autenticacaoUtil;
 	
 	Administrador(){
-		this.autenticador = new AutenticacaoUtil();
+		this.autenticacaoUtil = new AutenticacaoUtil();
 	}
 	
 	@Override
@@ -14,12 +14,12 @@ public class Administrador extends Funcionario implements Autenticavel{
 	
 	@Override
 	public void setSenha(int senha) {
-		autenticador.setSenha(senha);
+		autenticacaoUtil.setSenha(senha);
 	}
 
 	@Override
 	public boolean autentica(int senha) {
-		boolean result = autenticador.autentica(senha);
+		boolean result = autenticacaoUtil.autentica(senha);
 		return result;
 	}
 	
